@@ -1,0 +1,14 @@
+# Glide Sample Config
+
+telemetry:
+  logging:
+    level: debug
+    encoding: console
+
+routers:
+  language:
+    - id: myrouter
+      models:
+        - id: openai
+          openai:
+            api_key: ${file:./secrets/.OPENAI_API_KEY}  # make sure ./secrets/.OPENAI_API_KEY is available (or simply run `make init` to create it)
