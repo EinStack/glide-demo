@@ -4,13 +4,15 @@ Get started with Glide Gateway in under a few minutes with docker-compose.
 
 ## Get Started with Glide
 
-### 1. Clone this repository
+### MacOS, Linux
+
+#### 1. Clone this repository
 
 ```bash
 git clone https://github.com/EinStack/glide-demo.git
 ```
 
-### 2. Init Configs
+#### 2. Init Configs
 
 The demo repository comes with a basic config. Additionally, you need to init your secrets by running:
 
@@ -20,7 +22,7 @@ make init # from the demo root
 
 This will create the `secrets` directory with one `.OPENAI_API_KEY` file that you need to put your key to.
 
-### 3. Start Glide
+#### 3. Start Glide
 
 After that, just use docker compose via this command to start your demo environment:
 
@@ -28,7 +30,28 @@ After that, just use docker compose via this command to start your demo environm
 make up
 ```
 
-### 4. Sample API Request to `/chat` endpoint
+### Windows
+
+#### 1. Clone this repository
+
+```bash
+git clone https://github.com/EinStack/glide-demo.git
+```
+
+#### 2. Init Configs
+
+- create a dir called `secrets` in the demo project root
+- inside of the dir create a new file called `.OPENAI_API_KEY` with your OpenAI access token
+
+#### 3. Start Glide
+
+After that, just use docker compose via this command to start your demo environment:
+
+```bash
+docker-compose up -d
+```
+
+## 4. Sample API Request to `/chat` endpoint
 
 See [API Reference](https://backlandlabs.mintlify.app/api-reference/introduction) for more details.
 
@@ -47,7 +70,7 @@ See [API Reference](https://backlandlabs.mintlify.app/api-reference/introduction
 }
 ```
 
-### API Docs
+## API Docs
 
 Finally, Glide comes with OpenAPI documentation that is accessible via http://127.0.0.1:9099/v1/swagger/index.html
 
